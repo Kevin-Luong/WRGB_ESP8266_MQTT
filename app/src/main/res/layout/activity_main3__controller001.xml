@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MainScreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/myOwnColor"
+    tools:context=".Main3Activity_Controller001">
+
+    <Button
+        android:id="@+id/reconnectButton"
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:layout_alignTop="@+id/publishButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="0dp"
+        android:onClick="mqttConnect"
+        android:text="Connect"
+        android:textSize="16dp"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="281dp" />
+
+    <Button
+        android:id="@+id/publishButton"
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:enabled="false"
+        android:onClick="mqttPublish"
+        android:text="Send"
+        android:textSize="16dp"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="231dp" />
+
+
+
+    <ImageView
+        android:id="@+id/colorPreview1"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="120dp"
+        android:src="@android:color/holo_red_light" />
+
+    <ImageView
+        android:id="@+id/colorPreview2"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="157dp"
+        android:layout_marginEnd="120dp"
+        android:src="@android:color/holo_green_light" />
+
+    <ImageView
+        android:id="@+id/colorPreview3"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="216dp"
+        android:layout_marginEnd="120dp"
+        android:src="@android:color/holo_blue_light" />
+
+    <ImageView
+        android:id="@+id/colorPreview4"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="275dp"
+        android:layout_marginEnd="120dp"
+        android:src="@android:color/holo_red_light" />
+
+    <ImageView
+        android:id="@+id/colorPreview5"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="334dp"
+        android:layout_marginEnd="120dp"
+        android:src="@android:color/holo_green_light" />
+
+    <ImageView
+        android:id="@+id/colorPreview6"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="393dp"
+        android:layout_marginEnd="120dp"
+        android:rotation="0"
+        android:src="@android:color/holo_green_light" />
+
+    <SeekBar
+        android:id="@+id/stepSeekBar"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:layout_alignEnd="@+id/reconnectButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-220dp"
+        android:layout_marginBottom="200dp"
+        android:max="1000"
+        android:min="0" />
+
+    <EditText
+        android:id="@+id/minStepEditText"
+        android:layout_width="33dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/reconnectButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-48dp"
+        android:layout_marginBottom="200dp"
+        android:ems="10"
+        android:hint="2"
+        android:inputType="numberSigned"
+        android:text="2"
+        android:textColor="@android:color/black"
+        tools:text="1" />
+
+    <EditText
+        android:id="@+id/maxStepEditText"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/reconnectButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="320dp"
+        android:layout_marginBottom="200dp"
+        android:ems="10"
+        android:hint="64"
+        android:inputType="numberSigned"
+        android:text="64"
+        android:textColor="@android:color/black"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/stepValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/reconnectButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="90dp"
+        android:layout_marginBottom="180dp"
+        android:text="Fading speed: "
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <SeekBar
+        android:id="@+id/speedSeekBar"
+        style="@android:style/Widget.Material.Light.SeekBar"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:layout_alignEnd="@+id/reconnectButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-220dp"
+        android:layout_marginBottom="120dp"
+        android:max="1000"
+        android:min="0" />
+
+    <EditText
+        android:id="@+id/minSpeedEditText"
+        android:layout_width="33dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/reconnectButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-48dp"
+        android:layout_marginBottom="122dp"
+        android:ems="10"
+        android:hint="150"
+        android:inputType="numberSigned"
+        android:text="150"
+        android:textColor="@android:color/black"
+        tools:text="1" />
+
+    <EditText
+        android:id="@+id/maxSpeedEditText"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/reconnectButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="320dp"
+        android:layout_marginBottom="122dp"
+        android:ems="10"
+        android:hint="500"
+        android:inputType="numberSigned"
+        android:text="500"
+        android:textColor="@android:color/black"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/speedValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/reconnectButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="90dp"
+        android:layout_marginBottom="98dp"
+        android:text="Signal speed: "
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <SeekBar
+        android:id="@+id/optionSeekBar"
+        style="@android:style/Widget.Material.Light.SeekBar"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:layout_alignEnd="@+id/reconnectButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-220dp"
+        android:layout_marginBottom="40dp"
+        android:max="1000"
+        android:min="0" />
+
+    <EditText
+        android:id="@+id/minOptionEditText"
+        android:layout_width="33dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/reconnectButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-48dp"
+        android:layout_marginBottom="42dp"
+        android:ems="10"
+        android:hint="1"
+        android:inputType="numberSigned"
+        android:text="1"
+        android:textColor="@android:color/black"
+        tools:text="1" />
+
+    <EditText
+        android:id="@+id/maxOptionEditText"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/reconnectButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="320dp"
+        android:layout_marginBottom="42dp"
+        android:ems="10"
+        android:hint="10"
+        android:inputType="numberSigned"
+        android:text="10"
+        android:textColor="@android:color/black"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/optionValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/reconnectButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="120dp"
+        android:layout_marginBottom="16dp"
+        android:text="Effect: "
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Switch
+        android:id="@+id/directionSwitch"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="487dp"
+        android:rotation="-90"
+        android:textColor="@android:color/white"
+        android:textOff="Down"
+        android:textOn="Up"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/directionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/reconnectButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="505dp"
+        android:text="Direction"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

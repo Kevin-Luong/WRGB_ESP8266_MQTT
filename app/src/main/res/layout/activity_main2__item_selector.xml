@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/PatternSelectorScreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main2Activity_ItemSelector">
+
+
+    <TextView
+        android:id="@+id/TitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="163dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="16dp"
+        android:text="SELECT YOUR DEVICE"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewPixelPathway"
+        android:layout_width="347dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="48dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginStart="19dp"
+        android:onClick="device002Click"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/pathway01" />
+
+    <TextView
+        android:id="@+id/WRGBTreeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:text="WRGB Christmas Tree"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewWRGBChristmasTree" />
+
+    <ImageView
+        android:id="@+id/imageViewWRGBChristmasTree"
+        android:layout_width="186dp"
+        android:layout_height="383dp"
+        android:layout_marginBottom="48dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:onClick="device001Click"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewPixelPathway"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/treewrgb" />
+
+    <TextView
+        android:id="@+id/pathwayTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:text="Pixel Pathway"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPixelPathway" />
+</android.support.constraint.ConstraintLayout>

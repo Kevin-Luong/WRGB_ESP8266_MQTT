@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MainScreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/myOwnColor"
+    tools:context=".Main4Activity_Controller002">
+
+    <Button
+        android:id="@+id/publishButton"
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:enabled="false"
+        android:onClick="mqttPublish"
+        android:text="Send"
+        android:textSize="16dp"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="231dp" />
+
+    <Button
+        android:id="@+id/reconnectButton"
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:layout_alignTop="@+id/publishButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="0dp"
+        android:onClick="mqttConnect"
+        android:text="Connect"
+        android:textSize="16dp"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="281dp" />
+
+    <!--
+    <com.flask.colorpicker.ColorPickerView
+        android:id="@+id/color_picker_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="89dp"
+        app:density="12"
+        app:lightnessSlider="true"
+        app:lightnessSliderView="@+id/v_lightness_slider"
+        app:wheelType="FLOWER"/>
+
+    <com.flask.colorpicker.slider.LightnessSlider
+        android:id="@+id/v_lightness_slider"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/color_picker_view" />
+    -->
+
+    <SeekBar
+        android:id="@+id/optionSeekBar"
+        style="@android:style/Widget.DeviceDefault.Light.SeekBar"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:layout_alignEnd="@+id/reconnectButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="-220dp"
+        android:max="6"
+        android:min="0"
+        android:progress="1" />
+
+    <EditText
+        android:id="@+id/minOptionEditText"
+        android:layout_width="33dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/reconnectButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-48dp"
+        android:layout_marginBottom="60dp"
+        android:ems="10"
+        android:hint="0"
+        android:inputType="numberSigned"
+        android:text="0"
+        android:textColor="@android:color/black"
+        tools:text="0" />
+
+    <EditText
+        android:id="@+id/maxOptionEditText"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/reconnectButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="320dp"
+        android:layout_marginBottom="60dp"
+        android:ems="10"
+        android:hint="6"
+        android:inputType="numberSigned"
+        android:text="6"
+        android:textColor="@android:color/black"
+        tools:text="6" />
+
+    <TextView
+        android:id="@+id/optionValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/reconnectButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="120dp"
+        android:layout_marginBottom="40dp"
+        android:text="Effect: "
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <com.flask.colorpicker.ColorPickerView
+        android:id="@+id/color_picker_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="108dp"
+        app:alphaSlider="false"
+        app:density="12"
+        app:lightnessSlider="true"
+        app:lightnessSliderView="@+id/v_lightness_slider"
+        app:wheelType="FLOWER" />
+
+    <com.flask.colorpicker.slider.LightnessSlider
+        android:id="@+id/v_lightness_slider"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="140dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="128dp"
+        android:text="Brightness"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
